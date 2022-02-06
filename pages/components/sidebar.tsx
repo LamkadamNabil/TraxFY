@@ -66,7 +66,7 @@ const Sidebar = ()=>{
                     </Box>
                     <Box marginBottom="20px">
                         <List spacing={2}>
-                            {
+                            {  
                                 navMenu.map((menu)=>(
                                   <ListItem paddingX="20px" fontSize="16px" key={menu.name}>
                                       <LinkBox>

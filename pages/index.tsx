@@ -5,7 +5,8 @@ import GradientLayout from './components/gradientLayout'
 
 export default function Home() {
   return (
-    <GradientLayout color="red">
+// @ts-ignore    
+ <GradientLayout color="green" roundImage image="/said.jpg" description="15 public playlist" subtitle="profile" title="said aabila" >
            <div>
              hello
            </div>
