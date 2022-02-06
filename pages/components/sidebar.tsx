@@ -47,9 +47,9 @@ const musicMenu =[
   icon:MdFavorite
  },
 ]
-//const playlists=new Array(50).fill(1).map((_,i)=> `Playlist ${i+1}`)
+const playlists=new Array(50).fill(1).map((_,i)=> `Playlist ${i+1}`)
 const Sidebar = ()=>{
-  const {playlists} =usePlaylist()
+//  const {playlists} =usePlaylist()
   console.log(usePlaylist())
     return(
      <Box width="100%" 
