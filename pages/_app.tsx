@@ -34,9 +34,14 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <PlayerLoyout>
+       {Component.authPage ? (
+          <Component {...pageProps} />
+        ) : (
+       <PlayerLoyout>
        <Component {...pageProps} />
        </PlayerLoyout>
+        )}
+    
     </ChakraProvider>
   )
 }
