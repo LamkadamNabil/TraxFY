@@ -25,11 +25,12 @@ const run =async ()=> {
     )
     const salt =bcrypt.genSaltSync()
     const user=await prisma.user.upsert({
-        where : {email :'user@gmail.com'},
+        where : {email :'nabil@gmail.com'},
                   update :{},
                   create :{
-                      email :'user@gmail.com',
-                      password :bcrypt.hashSync('password',salt),
+                      email :'nabil@gmail.com',
+                      password :bcrypt.hashSync('password',salt)
+                  
                   }
     })
     const songs =await prisma.song.findMany({})

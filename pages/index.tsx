@@ -1,17 +1,19 @@
 import { Box, Text, Flex } from '@chakra-ui/layout'
 import { Image } from '@chakra-ui/react'
+import { useMe } from '../lib/hooks'
 import prisma from '../lib/prisma'
 import GradientLayout from './components/gradientLayout'
 const Home = ({ artists }) => {
+  //const {user} =useMe() ;
   console.log(artists);
   return (
     <GradientLayout
     roundImage
-      color="purple"
+      color="pink"
       subtitle="profile"
       title="SAID AABILLA "
       description="Exclusive content! You can now listen to my podcasts on spotify!"
-      image="https://avatars.githubusercontent.com/u/81530466?v=4"
+      image="said2.jpeg"
     >
       <Box color="white" paddingX="40px">
         <Box marginBottom="40px">
@@ -25,7 +27,7 @@ const Home = ({ artists }) => {
             <Box paddingX="10px" width="20%">
               <Box bg="gray.900" borderRadius="4px" padding="15px" width="100%">
                 <Image
-                  src="https://avatars.githubusercontent.com/u/81530466?v=4"
+                  src="said2.jpeg"
                   borderRadius="100%"
                 />
                 <Box marginTop="20px">
