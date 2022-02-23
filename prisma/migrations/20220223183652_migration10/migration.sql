@@ -17,6 +17,7 @@ CREATE TABLE "Song" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "artistId" INTEGER NOT NULL,
     "url" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
 
     CONSTRAINT "Song_pkey" PRIMARY KEY ("id")
 );
@@ -50,6 +51,9 @@ CREATE TABLE "_PlaylistToSong" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Song_name_key" ON "Song"("name");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Artist_name_key" ON "Artist"("name");

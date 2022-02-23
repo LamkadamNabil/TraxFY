@@ -6,9 +6,10 @@ generator client {
 }
 
 datasource db {
-  provider = "postgres"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
   shadowDatabaseUrl  =env("SHADOW_DATABASE_URL")
+
 }
 model User {
   id        Int      @id @default(autoincrement())
@@ -16,6 +17,8 @@ model User {
   updatedAt DateTime @updatedAt
   email     String   @unique
   password  String  
+  firstName String  
+  lastName  String  
   playlist Playlist[]
 }
 model Song {

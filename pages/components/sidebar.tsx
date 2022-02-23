@@ -97,7 +97,7 @@ const Sidebar = ()=>{
                                            <ListIcon
                                              as ={item.icon}
                                              color ="white"
-                                            marginRight="20px"     
+                                             marginRight="20px"     
                                                  />
                                                  {item.name}
                                            </LinkOverlay>
@@ -113,7 +113,10 @@ const Sidebar = ()=>{
                         {playlists.map(playlist =>(
                                       <ListItem paddingX="20px" key={playlist.id}>           
                                          <LinkBox>
-                                        <NextLink href='/' passHref>
+                                        <NextLink href={{
+                                           pathname : '/playlist/[id]',
+                                           query :{id :playlist.id}
+                                        }} passHref>
                                            <LinkOverlay>
                                                 {playlist.name}
                                            </LinkOverlay>
