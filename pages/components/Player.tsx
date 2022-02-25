@@ -83,9 +83,7 @@ import {
                           max ={321}
                           id="player-range"
                           >
-                            <RangeSliderTrack  ng="gray.800">
-                                <RangeSliderFilledTrack ng="gary.600"/>
-                            </RangeSliderTrack>
+                          
                             <RangeSliderThumb index={0}/>
                            </RangeSlider>
                    </Box>
